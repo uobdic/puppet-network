@@ -31,8 +31,14 @@ class network {
     }
   }
 
+  if $::facts['os']['release']['major'] == '8' {
+    $network_service = 'NetworkManager'
+  } else {
+    $network_service = 'network'
+  }
   service { 'network':
     ensure     => 'running',
+    name       => $network_service,
     enable     => true,
     hasrestart => true,
     hasstatus  => true,
