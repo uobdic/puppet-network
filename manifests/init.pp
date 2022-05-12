@@ -225,6 +225,7 @@ define network_if_base (
       metric          => $metric,
       promisc         => $promisc,
       arpcheck        => $arpcheck,
+      nm_controlled   => $nm_controlled,
     })
   }
 
