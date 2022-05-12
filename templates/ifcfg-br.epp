@@ -23,4 +23,5 @@ DELAY=<%= $delay %>
 STP=<%= bool2str($stp, 'yes', 'no') %>
 <% if $bridging_opts { %>BRIDGING_OPTS="<%= $bridging_opts %>"<% } %>
 <% if $scope { %>SCOPE="<%= $scope %>"<% } %>
-NM_CONTROLLED=no
+<% if $nm_controlled { %>NM_CONTROLLED=yes<% } %>
+<% if !$nm_controlled { %>NM_CONTROLLED=no<% } %>

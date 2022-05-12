@@ -13,4 +13,5 @@ NO_ALIASROUTING=<%= bool2str($noaliasrouting, 'yes', 'no') %>
 <% if $userctl { %>USERCTL=yes<% } %>
 <% if $zone { %>ZONE=<%= $zone %><% } %>
 <% if $metric { %>METRIC=<%= $metric %><% } %>
-NM_CONTROLLED=no
+<% if $nm_controlled { %>NM_CONTROLLED=yes<% } %>
+<% if !$nm_controlled { %>NM_CONTROLLED=no<% } %>

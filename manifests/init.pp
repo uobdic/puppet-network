@@ -146,6 +146,7 @@ define network_if_base (
   Boolean $promisc = false,
   Boolean $restart = true,
   Boolean $arpcheck = true,
+  Boolean $nm_controlled = false,
 ) {
 
   include '::network'

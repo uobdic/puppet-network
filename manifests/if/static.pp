@@ -87,6 +87,7 @@ define network::if::static (
   Optional[String] $metric = undef,
   Boolean $restart = true,
   Boolean $arpcheck = true,
+  Boolean $nm_controlled = false,
 ) {
   # Handle multiple IPv6 addresses
   if is_array($ipv6address) {
@@ -139,5 +140,6 @@ define network::if::static (
     metric          => $metric,
     restart         => $restart,
     arpcheck        => $arpcheck,
+    nm_controlled   => $nm_controlled,
   }
 } # define network::if::static

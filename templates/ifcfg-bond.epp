@@ -13,4 +13,5 @@ TYPE=Ethernet
 <% if $bootproto { %>BOOTPROTO=<%= $bootproto %><% } %>
 <% if $onboot { %>ONBOOT=<%= $onboot %><% } %>
 <% if $userctl { %>USERCTL=yes<% } %>
-NM_CONTROLLED=no
+<% if $nm_controlled { %>NM_CONTROLLED=yes<% } %>
+<% if !$nm_controlled { %>NM_CONTROLLED=no<% } %>
